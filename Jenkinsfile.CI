@@ -5,6 +5,7 @@ pipeline {
         stage('build'){
             steps{
                 dir('To-Do-App'){
+                    sh 'ls -l'
                     sh 'docker compose up --build -d'
                     echo 'hola'
                 }
