@@ -4,12 +4,10 @@ pipeline {
     stages {
         stage('build'){
             steps{
-                sh 'yarn install'
-                sh 'yarn test'
                 dir('To-Do-App'){
+                    sh 'yarn install'
+                    sh 'yarn test'
                     echo 'hola'
-                
-                    sh 'docker compose up --build -d'
                 }
             }
         }
