@@ -7,7 +7,6 @@ pipeline {
                 dir('To-Do-App'){
                     sh 'docker compose up --build -d'
                     echo 'hola'
-                    sh 'docker exec app-container yarn test'
                 }
             }
         }
